@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berserk - Anime Vortex</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .header-btn, .read-btn, .modal-btn, button[type='submit'] { border-radius: 32px !important; }
+        .manga-details {
+            max-width: 900px;
+            margin: 2.5rem auto 0 auto;
+            padding: 2.5rem 2.5vw;
+            background: rgba(24,24,24,0.97);
+            border-radius: 18px;
+            box-shadow: 0 6px 36px #00000030;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 1;
+            pointer-events: none;
+        }
+    </style>
+    <style>*::selection { background: transparent !important; color: inherit !important; }</style>
+    <script>// İçerik koruması
+    window.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+      document.addEventListener('copy', function(e) { e.preventDefault(); });
+      document.addEventListener('cut', function(e) { e.preventDefault(); });
+      document.addEventListener('selectstart', function(e) { e.preventDefault(); });
+      document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) ||
+            (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I' || e.key === 'j' || e.key === 'J')) ||
+            (e.key === 'F12')) {
+          e.preventDefault();
+        }
+      });
+    });</script>
+</head>
+<body>
+    <div class="header">
+        <nav>
+            <div class="logo">Anime Vortex</div>
+            <div class="nav-items">
+                <a href="../index.html">Ana Sayfa</a>
+                <a href="#mangalar">Mangalar</a>
+                <a href="#yeni-cikanlar">Yeni Çıkanlar</a>
+            </div>
+            <div class="auth-buttons">
+                
+                
+            </div>
+        </nav>
+    </div>
+    <style>
+    .hero-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 3rem;
+      font-weight: 900;
+      color: #fff;
+      text-align: center;
+      margin: 2.5rem 0 1rem 0;
+      background: none !important;
+      box-shadow: none !important;
+      border: none !important;
+      padding: 0 !important;
+      filter: none !important;
+      backdrop-filter: none !important;
+      opacity: 1 !important;
+      outline: none !important;
+    }
+    </style>
+    <!-- Eğer video arka planı istenmiyorsa aşağıdaki iki satırı silebilirsiniz -->
+    <!-- <video class="hero-bg-video" autoplay muted loop playsinline>
+        <source src="../background.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+    </video> -->
+    <main class="manga-details">
+        <div class="manga-header">
+            <img src="../../images/berserk.jpg" alt="Berserk">
+            <div class="manga-info">
+                <h1>Berserk <span class="manga-badge">Karanlık Fantezi</span></h1>
+                <p>Yazar: <b>Kentaro Miura</b></p>
+                <p>Tür: <span style="color:#e50914">Karanlık Fantezi, Aksiyon</span></p>
+                <p>Toplam Bölüm: <b>364</b></p>
+                <div style="margin-top:1.2rem">
+                    <button class="read-btn" style="font-size:1.2rem;padding:1rem 2.5rem;"><i class="fa-solid fa-book-open"></i> Rastgele Bölüm Oku</button>
+                </div>
+            </div>
+        </div>
+        <section class="chapters">
+            <h2>Bölümler</h2>
+            <div class="chapter-list">
+                <div class="chapter-card">
+                    <div class="chapter-number">1</div>
+                    <div class="chapter-info">
+                        <h3>Bölüm 1: Kara Kılıç</h3>
+                        <p>Yayın Tarihi: 1990</p>
+                    </div>
+                    <button class="read-btn"><i class="fa-solid fa-eye"></i> Oku</button>
+                </div>
+                <div class="chapter-card">
+                    <div class="chapter-number">2</div>
+                    <div class="chapter-info">
+                        <h3>Bölüm 2: Şeytanın Eli</h3>
+                        <p>Yayın Tarihi: 1990</p>
+                    </div>
+                    <button class="read-btn"><i class="fa-solid fa-eye"></i> Oku</button>
+                </div>
+                <div class="chapter-card">
+                    <div class="chapter-number">3</div>
+                    <div class="chapter-info">
+                        <h3>Bölüm 3: Kan ve Kader</h3>
+                        <p>Yayın Tarihi: 1990</p>
+                    </div>
+                    <button class="read-btn"><i class="fa-solid fa-eye"></i> Oku</button>
+                </div>
+                <div class="chapter-card">
+                    <div class="chapter-number">4</div>
+                    <div class="chapter-info">
+                        <h3>Bölüm 4: Zırhlı Savaşçı</h3>
+                        <p>Yayın Tarihi: 1990</p>
+                    </div>
+                    <button class="read-btn"><i class="fa-solid fa-eye"></i> Oku</button>
+                </div>
+                <!-- Daha fazla bölüm buraya eklenebilir -->
+            </div>
+        </section>
+    </main>
+    <section id="yorumlar" style="max-width:700px;margin:3rem auto 2rem auto;padding:2rem;background:#23243a;border-radius:12px;box-shadow:0 4px 32px #e5091440;">
+        <h2 style="color:#e50914;">Yorumlar</h2>
+        <div id="yorumListesi"></div>
+        <hr style="margin:2rem 0;">
+        <form id="yorumForm">
+            <input type="text" id="yorumKullanici" placeholder="Kullanıcı Adı" required style="padding:0.7rem;border-radius:18px;border:none;width:160px;">
+            <select id="yorumYildiz" required style="padding:0.7rem;border-radius:18px;border:none;width:100px;">
+                <option value="">Yıldız</option>
+                <option value="1">1 ⭐</option>
+                <option value="2">2 ⭐</option>
+                <option value="3">3 ⭐</option>
+                <option value="4">4 ⭐</option>
+                <option value="5">5 ⭐</option>
+            </select>
+            <input type="text" id="yorumIcerik" placeholder="Yorumunuz" required style="padding:0.7rem;border-radius:18px;border:none;width:250px;">
+            <button type="submit" style="background:#e50914;color:#fff;border:none;padding:0.7rem 1.5rem;border-radius:32px;font-weight:bold;">Gönder</button>
+        </form>
+        <div id="yorumHata" style="color:#e50914;margin-top:1rem;"></div>
+    </section>
+
+    <footer>
+    <div class="footer-content">
+        <p>&copy; 2025 Anime Vortex. Tüm hakları saklıdır. | Tasarım: <span style="color:#e50914;font-weight:bold">Netflix Inspired</span></p>
+    </div>
+    </footer>
+    <script src="../script.js"></script>
+    <script>document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });</script>
+    <script src="yorumlar_bolum.js"></script>
+</body>
+</html>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: #181818;
+            color: #fff;
+            font-family: 'Roboto', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .classic-header {
+            background: #111;
+            padding: 18px 0;
+            text-align: center;
+            box-shadow: 0 2px 8px #000a;
+        }
+        .classic-header h1 {
+            color: #e50914;
+            font-size: 2.2rem;
+            margin: 0;
+            letter-spacing: 2px;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+        .manga-cover {
+            display: block;
+            margin: 32px auto 16px auto;
+            max-width: 180px;
+            border-radius: 10px;
+            box-shadow: 0 4px 24px #0007;
+        }
+        .manga-details {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .manga-details h2 {
+            margin: 10px 0 6px 0;
+            font-size: 1.7rem;
+            color: #fff;
+        }
+        .manga-details p {
+            margin: 0 0 8px 0;
+            color: #ccc;
+            font-size: 1.05rem;
+        }
+        .chapter-list {
+            max-width: 520px;
+            margin: 0 auto 36px auto;
+            background: #222;
+            border-radius: 10px;
+            padding: 22px 18px 18px 18px;
+            box-shadow: 0 2px 18px #0005;
+        }
+        .chapter-list h3 {
+            color: #e50914;
+            margin-top: 0;
+            font-size: 1.2rem;
+            letter-spacing: 1px;
+        }
+        .chapter-item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #333;
+        }
+        .chapter-item:last-child {
+            border-bottom: none;
+        }
+        .chapter-title {
+            color: #fff;
+            font-weight: 500;
+            font-size: 1.06rem;
+        }
+        .read-btn {
+            background: #e50914;
+            color: #fff;
+            border: none;
+            border-radius: 18px;
+            padding: 6px 18px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: 700;
+            transition: background 0.2s;
+        }
+        .read-btn:hover {
+            background: #b0060f;
+        }
+        .classic-footer {
+            background: #111;
+            color: #aaa;
+            text-align: center;
+            padding: 18px 0 10px 0;
+            font-size: 1rem;
+            margin-top: 40px;
+        }
+        @media (max-width: 600px) {
+            .chapter-list {
+                padding: 12px 2vw 12px 2vw;
+            }
+            .manga-cover {
+                max-width: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="classic-header">
+        <h1>Berserk Manga</h1>
+    </div>
+    <img src="../assets/berserk-cover.jpg" alt="Berserk Kapak" class="manga-cover">
+
+    <div class="chapter-list">
+        <h3>Bölümler</h3>
+        <div class="chapter-item">
+            <span class="chapter-title">Bölüm 1: Kara Kılıç</span>
+            <a href="#" class="read-btn">Oku</a>
+        </div>
+        <div class="chapter-item">
+            <span class="chapter-title">Bölüm 2: Şeytanın Eli</span>
+            <a href="#" class="read-btn">Oku</a>
+        </div>
+        <div class="chapter-item">
+            <span class="chapter-title">Bölüm 3: Kan ve Kader</span>
+            <a href="#" class="read-btn">Oku</a>
+        </div>
+        <div class="chapter-item">
+            <span class="chapter-title">Bölüm 4: Zırhlı Savaşçı</span>
+            <a href="#" class="read-btn">Oku</a>
+        </div>
+        <!-- Daha fazla bölüm eklenebilir -->
+    </div>
+    <div class="classic-footer">
+        &copy; 2025 Anime Vortex | Tüm hakları saklıdır.
+    </div>
+    <script>
+        // Basit içerik koruma
+        document.addEventListener('contextmenu', event => event.preventDefault());
+        document.addEventListener('selectstart', event => event.preventDefault());
+        document.addEventListener('copy', event => event.preventDefault());
+        document.addEventListener('cut', event => event.preventDefault());
+        window.addEventListener('keydown', function(e) {
+            if (e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) e.preventDefault();
+            if (e.key === 'F12') e.preventDefault();
+        });
+    <\/script>
+</body>
+</html>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .header-btn, .read-btn, .modal-btn, button[type='submit'] { border-radius: 32px !important; }
+        .manga-details {
+            max-width: 900px;
+            margin: 2.5rem auto 0 auto;
+            padding: 2.5rem 2.5vw;
+            background: rgba(24,24,24,0.97);
+            border-radius: 18px;
+            box-shadow: 0 6px 36px #00000030;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 1;
+            pointer-events: none;
+        }
+    </style>
+    <style>*::selection { background: transparent !important; color: inherit !important; }</style>
+    <script>// İçerik koruması
+    window.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+      document.addEventListener('copy', function(e) { e.preventDefault(); });
+      document.addEventListener('cut', function(e) { e.preventDefault(); });
+      document.addEventListener('selectstart', function(e) { e.preventDefault(); });
+      document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) ||
+            (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I' || e.key === 'j' || e.key === 'J')) ||
+            (e.key === 'F12')) {
+          e.preventDefault();
+        }
+      });
+    });</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berserk - Anime Vortex</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .header-btn, .read-btn, .modal-btn, button[type='submit'] { border-radius: 32px !important; }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Berserk - Bölümler - Anime Vortex</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>*::selection { background: transparent !important; color: inherit !important; }</style>
+<script>// İçerik koruması
+window.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+  document.addEventListener('copy', function(e) { e.preventDefault(); });
+  document.addEventListener('cut', function(e) { e.preventDefault(); });
+  document.addEventListener('selectstart', function(e) { e.preventDefault(); });
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I' || e.key === 'j' || e.key === 'J')) ||
+        (e.key === 'F12')) {
+      e.preventDefault();
+    }
+  });
+});</script>
+<style>*::selection { background: transparent !important; color: inherit !important; }</style>
+<script>// İçerik koruması
+window.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+  document.addEventListener('copy', function(e) { e.preventDefault(); });
+  document.addEventListener('cut', function(e) { e.preventDefault(); });
+  document.addEventListener('selectstart', function(e) { e.preventDefault(); });
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I' || e.key === 'j' || e.key === 'J')) ||
+        (e.key === 'F12')) {
+      e.preventDefault();
+    }
+  });
+});</script>
+</head>
+<body>
+    <video class="hero-bg-video" autoplay muted loop playsinline>
+        <source src="../background.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+    <div class="header">
+        <nav>
+            <div class="logo">Anime Vortex</div>
+            <div class="nav-items">
+                <a href="../index.html">Ana Sayfa</a>
+                <a href="#mangalar">Mangalar</a>
+                <a href="#yeni-cikanlar">Yeni Çıkanlar</a>
+            </div>
+            <div class="auth-buttons">
+                
+                
+            </div>
+        </nav>
+    </div>
+    <main class="manga-details">
+        <div class="manga-header">
+            <img src="../images/berserk.jpg" alt="Berserk">
+            <div class="manga-info">
+                <h1>Berserk <span class="manga-badge">Karanlık</span></h1>
+                <p>Yazar: <b>Kentaro Miura</b></p>
+                <p>Tür: <span style="color:#e50914">Karanlık Fantezi, Aksiyon</span></p>
+                <p>Toplam Bölüm: <b>370+</b></p>
+                <div style="margin-top:1.2rem">
+                    <button class="read-btn" style="font-size:1.2rem;padding:1rem 2.5rem;"><i class="fa-solid fa-book-open"></i> Rastgele Bölüm Oku</button>
+                </div>
+            </div>
+        </div>
+        <section class="chapters" style="padding-top:2rem;">
+            <h2>Bölümler</h2>
+            <div class="chapter-list" style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:2.2rem;">
+                <div class="chapter-card">
+                    <div style="background:var(--primary-color);color:#fff;width:60px;height:60px;display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:900;border-radius:12px;box-shadow:0 2px 8px #e5091440;">1</div>
+                    <div class="chapter-info">
+                        <h3>Bölüm 1: Kara Kılıçlı Adam</h3>
+                        <p>Yayın Tarihi: 1989</p>
+                    </div>
+                    <button class="read-btn"><i class="fa-solid fa-eye"></i> Oku</button>
+                </div>
+                <div class="chapter-card">
+                    <div style="background:var(--primary-color);color:#fff;width:60px;height:60px;display:flex;align-items:center;justify-content:center;font-size:2rem;font-weight:900;border-radius:12px;box-shadow:0 2px 8px #e5091440;">2</div>
+                    <div class="chapter-info">
+                        <h3>Bölüm 2: Kan ve Kader</h3>
+                        <p>Yayın Tarihi: 1989</p>
+                    </div>
+                    <button class="read-btn"><i class="fa-solid fa-eye"></i> Oku</button>
+                </div>
+                <!-- Daha fazla bölüm buraya eklenebilir -->
+        </div>
+    </section>
+</main>
+    <footer>
+    <div class="footer-content">
+        <p>&copy; 2025 Anime Vortex. Tüm hakları saklıdır. | Tasarım: <span style="color:#e50914;font-weight:bold">Netflix Inspired</span></p>
+    </div>
+    <div class="footer-content">
+        <p>&copy; 2025 Anime Vortex. Tüm hakları saklıdır. | Tasarım: <span style="color:#e50914;font-weight:bold">Netflix Inspired</span></p>
+    </div>
+</footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Anime Vortex. Tüm hakları saklıdır. | Tasarım: <span style="color:#e50914;font-weight:bold">Netflix Inspired</span></p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+<script>document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});</script>
+</body>
+</html>

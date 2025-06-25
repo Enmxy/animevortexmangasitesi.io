@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><h1>Oshi no Ko Bölümler</h1>
+<p style="font-weight:bold; color:#e50914; margin-bottom:1em;">Toplam 10 bölüm</p> - Anime Vortex</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>*::selection { background: transparent !important; color: inherit !important; }
+body, html, * {
+  user-select: none !important;
+  -webkit-user-select: none !important;
+  -moz-user-select: none !important;
+  -ms-user-select: none !important;
+}
+</style>
+</head>
+<body>
+<script>
+  window.mangaId = 10;
+  window.chapterId = null;
+</script>
+    <div class="header">
+        <nav>
+            <div class="logo">Anime Vortex</div>
+            <div class="nav-items">
+                <a href="../index.html">Ana Sayfa</a>
+                <a href="#mangalar">Mangalar</a>
+                <a href="#yeni-cikanlar">Yeni Çıkanlar</a>
+            </div>
+            <div class="auth-buttons">
+                
+                
+            </div>
+        </nav>
+    </div>
+    <main class="manga-details">
+        <div class="manga-header">
+            <img src="../images/oshi-no-ko.jpg" alt="Oshi no Ko">
+            <div class="manga-info">
+                <h1>Oshi no Ko <span class="manga-badge">Dram</span></h1>
+                <p>Yazar: <b>Aka Akasaka</b></p>
+                <p>Tür: <span style="color:#e50914">Dram, Gizem</span></p>
+                <p>Toplam Bölüm: <b>140+</b></p>
+                <div style="margin-top:1.2rem">
+                    <button class="read-btn" style="font-size:1.2rem;padding:1rem 2.5rem;"><i class="fa-solid fa-book-open"></i> Rastgele Bölüm Oku</button>
+                </div>
+            </div>
+        </div>
+        <section class="chapters">
+            <h2>Bölümler</h2>
+            <div class="chapter-list">
+                <div class="chapter-card">
+                    <div class="chapter-number">1</div>
+                    <div class="chapter-info">
+                        <h3>Bölüm 1: Yıldızların Çocukları</h3>
+                        <p>Yayın Tarihi: 2020</p>
+                    </div>
+                    <button class="read-btn"><i class="fa-solid fa-eye"></i> Oku</button>
+                </div>
+                <div class="chapter-card">
+                    <div class="chapter-number">2</div>
+                    <div class="chapter-info">
+                        <h3>Bölüm 2: Sahte Hayat</h3>
+                        <p>Yayın Tarihi: 2020</p>
+                    </div>
+                    <button class="read-btn"><i class="fa-solid fa-eye"></i> Oku</button>
+                </div>
+                <!-- Daha fazla bölüm buraya eklenebilir -->
+            </div>
+        </section>
+    </main>
+<section id="yorumlar" style="max-width:700px;margin:3rem auto 2rem auto;padding:2rem;background:#23243a;border-radius:12px;box-shadow:0 4px 32px #e5091440;">
+    <h2 style="color:#e50914;">Yorumlar</h2>
+    <div id="yorumListesi"></div>
+    <hr style="margin:2rem 0;">
+    <form id="yorumForm">
+        <input type="text" id="yorumKullanici" placeholder="Kullanıcı Adı" required style="padding:0.7rem;border-radius:18px;border:none;width:160px;">
+        <select id="yorumYildiz" required style="padding:0.7rem;border-radius:18px;border:none;width:100px;">
+            <option value="">Yıldız</option>
+            <option value="1">1 ⭐</option>
+            <option value="2">2 ⭐</option>
+            <option value="3">3 ⭐</option>
+            <option value="4">4 ⭐</option>
+            <option value="5">5 ⭐</option>
+        </select>
+        <input type="text" id="yorumIcerik" placeholder="Yorumunuz" required style="padding:0.7rem;border-radius:18px;border:none;width:250px;">
+        <button type="submit" style="background:#e50914;color:#fff;border:none;padding:0.7rem 1.5rem;border-radius:32px;font-weight:bold;">Gönder</button>
+    </form>
+    <div id="yorumHata" style="color:#e50914;margin-top:1rem;"></div>
+</section>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Anime Vortex. Tüm hakları saklıdır. | Tasarım: <span style="color:#e50914;font-weight:bold">Netflix Inspired</span></p>
+        </div>
+    </footer>
+    <script src="../script.js"></script>
+<script>document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+document.addEventListener('copy', function(e) { e.preventDefault(); });
+document.addEventListener('cut', function(e) { e.preventDefault(); });
+document.addEventListener('selectstart', function(e) { e.preventDefault(); });
+document.addEventListener('keydown', function(e) {
+  // F12, Ctrl+Shift+I, Ctrl+U, Ctrl+S, Ctrl+P
+  if (
+    e.key === 'F12' ||
+    (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'C')) ||
+    (e.ctrlKey && (e.key === 'U' || e.key === 'S' || e.key === 'P'))
+  ) {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  }
+});</script>
+<script src="yorumlar_bolum.js"></script>
+</body>
+</html>

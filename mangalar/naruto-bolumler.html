@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naruto - Anime Vortex</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .header-btn, .read-btn, .modal-btn, button[type='submit'] { border-radius: 32px !important; }
+        .manga-details {
+            max-width: 900px;
+            margin: 2.5rem auto 0 auto;
+            padding: 2.5rem 2.5vw;
+            background: rgba(24,24,24,0.97);
+            border-radius: 18px;
+            box-shadow: 0 6px 36px #00000030;
+            position: relative;
+            z-index: 2;
+        }
+        .hero-bg-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 1;
+            pointer-events: none;
+        }
+    </style>
+    <style>*::selection { background: transparent !important; color: inherit !important; }</style>
+    <script>// İçerik koruması
+    window.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+      document.addEventListener('copy', function(e) { e.preventDefault(); });
+      document.addEventListener('cut', function(e) { e.preventDefault(); });
+      document.addEventListener('selectstart', function(e) { e.preventDefault(); });
+      document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) ||
+            (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I' || e.key === 'j' || e.key === 'J')) ||
+            (e.key === 'F12')) {
+          e.preventDefault();
+        }
+      });
+    });</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naruto - Anime Vortex</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .header-btn, .read-btn, .modal-btn, button[type='submit'] { border-radius: 32px !important; }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naruto - Bölümler - Anime Vortex</title>
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+<style>*::selection { background: transparent !important; color: inherit !important; }</style>
+<script>// İçerik koruması
+window.addEventListener('DOMContentLoaded', function() {
+  document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+  document.addEventListener('copy', function(e) { e.preventDefault(); });
+  document.addEventListener('cut', function(e) { e.preventDefault(); });
+  document.addEventListener('selectstart', function(e) { e.preventDefault(); });
+  document.addEventListener('keydown', function(e) {
+    if ((e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) ||
+        (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I' || e.key === 'j' || e.key === 'J')) ||
+        (e.key === 'F12')) {
+      e.preventDefault();
+    }
+  });
+});</script>
+</head>
+<body>
+<script>
+  window.mangaId = 8;
+  window.chapterId = null;
+</script>
+    <video class="hero-bg-video" autoplay muted loop playsinline>
+        <source src="../background.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+    </video>
+    <div class="header">
+    <div class="auth-section">
+      <button class="login-btn" id="loginBtn">Giriş Yap</button>
+      <button class="signup-btn" id="registerBtn">Kayıt Ol</button>
+      <div class="profile-menu" id="profileMenu" style="display:none;">
+        <div class="profile-avatar" id="profileAvatar"></div>
+        <div class="profile-dropdown" id="profileDropdown" style="display:none;">
+          <label class="profile-upload-label">
+            <input type="file" id="profileImageInput" accept="image/*" style="display:none;">
+            Profil Resmi Ekle
+          </label>
+          <button id="logoutBtn">Çıkış Yap</button>
+        </div>
+      </div>
+    </div>
+        <nav>
+            <div class="logo">Anime Vortex</div>
+            <div class="nav-items">
+                <a href="../index.html">Ana Sayfa</a>
+                <a href="#">Mangalar</a>
+                <a href="#">Popülerler</a>
+                <a href="#">Yeni Çıkanlar</a>
+            </div>
+        </nav>
+    </div>
+    </video>
+
+        </nav>
+    </div>
+
+    <main class="manga-details">
+    <div class="manga-header">
+        <img src="../images/naruto.jpg" alt="Naruto">
+        <div class="manga-info">
+            <h1>Naruto <span class="manga-badge">Shounen</span></h1>
+            <p>Yazar: <b>Masashi Kishimoto</b></p>
+            <p>Tür: <span style="color:#e50914">Aksiyon, Macera</span></p>
+            <p>Toplam Bölüm: <b>700+</b></p>
+            <div style="margin-top:1.2rem">
+                <button class="read-btn" style="font-size:1.2rem;padding:1rem 2.5rem;"><i class="fa-solid fa-book-open"></i> Rastgele Bölüm Oku</button>
+            </div>
+        </div>
+    </div>
+    <section class="chapters">
+        <h2>Bölümler</h2>
+        <div class="chapter-list">
+            <div class="chapter-card">
+                <div class="chapter-number">1</div>
+                <div class="chapter-info">
+                    <h3>Bölüm 1: Naruto Uzumaki!</h3>
+                    <p>Yayın Tarihi: 1999</p>
+                </div>
+                <button class="read-btn"><i class="fa-solid fa-eye"></i> Oku</button>
+            </div>
+            <div class="chapter-card">
+                <div class="chapter-number">2</div>
+                <div class="chapter-info">
+                    <h3>Bölüm 2: İkinci Deneme: Kütük Üzerindeki Balıkçılık!</h3>
+                    <p>Yayın Tarihi: 1999</p>
+                </div>
+                <button class="read-btn"><i class="fa-solid fa-eye"></i> Oku</button>
+            </div>
+            <!-- Daha fazla bölüm buraya eklenebilir -->
+        </div>
+    </section>
+<!-- LOGIN MODAL -->
+<div class="modal" id="loginModal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" id="closeLogin">&times;</span>
+    <h2>Giriş Yap</h2>
+    <input id="loginUsername" type="text" placeholder="Kullanıcı Adı">
+    <input id="loginPassword" type="password" placeholder="Şifre">
+    <button id="loginSubmit" class="modal-btn">Giriş Yap</button>
+    <p class="switch-link" id="toRegister">Hesabınız yok mu? Kayıt Ol</p>
+  </div>
+</div>
+<!-- REGISTER MODAL -->
+<div class="modal" id="registerModal" style="display:none;">
+  <div class="modal-content">
+    <span class="close" id="closeRegister">&times;</span>
+    <h2>Kayıt Ol</h2>
+    <input id="registerUsername" type="text" placeholder="Kullanıcı Adı">
+    <input id="registerPassword" type="password" placeholder="Şifre">
+    <input id="registerPassword2" type="password" placeholder="Şifre (Tekrar)">
+    <button id="registerSubmit" class="modal-btn">Kayıt Ol</button>
+    <p class="switch-link" id="toLogin">Hesabınız var mı? Giriş Yap</p>
+  </div>
+</div>
+</main>
+<section id="yorumlar" style="max-width:700px;margin:3rem auto 2rem auto;padding:2rem;background:#23243a;border-radius:12px;box-shadow:0 4px 32px #e5091440;">
+    <h2 style="color:#e50914;">Yorumlar</h2>
+    <div id="yorumListesi"></div>
+    <hr style="margin:2rem 0;">
+    <form id="yorumForm">
+        <input type="text" id="yorumKullanici" placeholder="Kullanıcı Adı" required style="padding:0.7rem;border-radius:18px;border:none;width:160px;">
+        <select id="yorumYildiz" required style="padding:0.7rem;border-radius:18px;border:none;width:100px;">
+            <option value="">Yıldız</option>
+            <option value="1">1 ⭐</option>
+            <option value="2">2 ⭐</option>
+            <option value="3">3 ⭐</option>
+            <option value="4">4 ⭐</option>
+            <option value="5">5 ⭐</option>
+        </select>
+        <input type="text" id="yorumIcerik" placeholder="Yorumunuz" required style="padding:0.7rem;border-radius:18px;border:none;width:250px;">
+        <button type="submit" style="background:#e50914;color:#fff;border:none;padding:0.7rem 1.5rem;border-radius:32px;font-weight:bold;">Gönder</button>
+    </form>
+    <div id="yorumHata" style="color:#e50914;margin-top:1rem;"></div>
+</section>
+
+
+    <footer>
+    <div class="footer-content">
+        <p>&copy; 2025 Anime Vortex. Tüm hakları saklıdır. | Tasarım: <span style="color:#e50914;font-weight:bold">Netflix Inspired</span></p>
+    </div>
+    <div class="footer-content">
+        <p>&copy; 2025 Anime Vortex. Tüm hakları saklıdır. | Tasarım: <span style="color:#e50914;font-weight:bold">Netflix Inspired</span></p>
+    </div>
+</footer>
+        <div class="footer-content">
+            <p>&copy; 2025 Anime Vortex. Tüm hakları saklıdır.</p>
+        </div>
+    </footer>
+
+    <style>
+.auth-section { display: flex; align-items: center; gap: 1rem; justify-content: flex-end; margin: 1rem 2vw 0 0; }
+.login-btn, .signup-btn { border-radius: 32px; padding: 0.5rem 1.5rem; background: #e50914; color: #fff; border: none; font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; font-size: 1.05rem; cursor: pointer; transition: background 0.18s; }
+.login-btn:hover, .signup-btn:hover { background: #b0060f; }
+.profile-menu { position: relative; display: flex; align-items: center; }
+.profile-avatar { width: 48px; height: 48px; border-radius: 50%; background: #333 url('../images/default-avatar.png') center/cover no-repeat; cursor: pointer; border: 2px solid #e50914; }
+.profile-dropdown { position: absolute; top: 56px; right: 0; background: #181818; border-radius: 12px; box-shadow: 0 4px 24px #00000040; padding: 1rem; min-width: 140px; display: flex; flex-direction: column; gap: 0.6rem; z-index: 100; }
+.profile-upload-label { color: #e50914; cursor: pointer; font-size: 1rem; margin-bottom: 0.7rem; }
+.profile-upload-label:hover { text-decoration: underline; }
+#logoutBtn { border-radius: 24px; background: #e50914; color: #fff; border: none; padding: 0.5rem 0.8rem; font-weight: 700; cursor: pointer; }
+#logoutBtn:hover { background: #b0060f; }
+.modal { display: none; position: fixed; z-index: 200; left: 0; top: 0; width: 100vw; height: 100vh; background: rgba(20,20,30,0.93); backdrop-filter: blur(3px); align-items: center; justify-content: center; }
+.modal-content { background: #181818; border-radius: 10px; box-shadow: 0 4px 32px #e5091440; padding: 2.2rem 2rem 2rem 2rem; max-width: 340px; min-width: 270px; text-align: center; position: relative; }
+.modal-content h2 { color: #fff; margin-bottom: 1.2rem; font-family: 'Montserrat', Arial, sans-serif; }
+.modal-content input { width: 90%; margin-bottom: 1.1rem; padding: 0.7rem 1rem; border-radius: 7px; border: none; background: #23243a; color: #fff; font-size: 1rem; }
+.modal-btn { width: 95%; padding: 0.8rem 0; border-radius: 32px; border: none; background: #e50914; color: #fff; font-family: 'Montserrat', Arial, sans-serif; font-weight: 700; font-size: 1.1rem; cursor: pointer; margin-bottom: 0.5rem; transition: background 0.18s; }
+.modal-btn:hover { background: #b0060f; }
+.switch-link { color: #e50914; cursor: pointer; font-size: 0.98rem; text-decoration: underline; margin-top: 0.6rem; display: inline-block; }
+.close { position: absolute; top: 1.1rem; right: 1.2rem; font-size: 1.6rem; color: #fff; cursor: pointer; opacity: 1; font-weight: bold; }
+.close:hover { opacity: 1; }
+</style>
+<script>
+// Kullanıcı durumu
+// currentUser tanımı script.js üzerinden yönetiliyor. Bu satır kaldırıldı.
+let currentProfileImage = localStorage.getItem('profileImage') || '';
+
+function show(element) { element.style.display = 'flex'; }
+function hide(element) { element.style.display = 'none'; }
+function updateUI() {
+  const loginBtn = document.getElementById('loginBtn');
+  const registerBtn = document.getElementById('registerBtn');
+  const profileMenu = document.getElementById('profileMenu');
+  const profileAvatar = document.getElementById('profileAvatar');
+  if (currentUser) {
+    loginBtn.style.display = 'none';
+    registerBtn.style.display = 'none';
+    profileMenu.style.display = 'flex';
+    if (currentProfileImage) profileAvatar.style.backgroundImage = `url('${currentProfileImage}')`;
+    else profileAvatar.style.backgroundImage = "url('../images/default-avatar.png')";
+  } else {
+    loginBtn.style.display = 'inline-block';
+    registerBtn.style.display = 'inline-block';
+    profileMenu.style.display = 'none';
+  }
+}
+updateUI();
+
+// Modal açma/kapama
+const loginModal = document.getElementById('loginModal');
+const registerModal = document.getElementById('registerModal');
+document.getElementById('loginBtn').onclick = () => show(loginModal);
+document.getElementById('registerBtn').onclick = () => show(registerModal);
+document.getElementById('closeLogin').onclick = () => hide(loginModal);
+document.getElementById('closeRegister').onclick = () => hide(registerModal);
+document.getElementById('toRegister').onclick = () => { hide(loginModal); show(registerModal); };
+document.getElementById('toLogin').onclick = () => { hide(registerModal); show(loginModal); };
+window.onclick = function(e) {
+  if (e.target === loginModal) hide(loginModal);
+  if (e.target === registerModal) hide(registerModal);
+};
+// Kayıt
+function validateRegister() {
+  const username = document.getElementById('registerUsername').value.trim();
+  const password = document.getElementById('registerPassword').value;
+  const password2 = document.getElementById('registerPassword2').value;
+  if (!username || !password || !password2) {
+    alert('Lütfen tüm alanları doldurun!');
+    return false;
+  }
+  if (password !== password2) {
+    alert('Şifreler eşleşmiyor!');
+    return false;
+  }
+  return { username, password };
+}
+document.getElementById('registerSubmit').onclick = async () => {
+  const valid = validateRegister();
+  if (!valid) return;
+  // Backend API çağrısı burada olacak (örnek, backend güncellenmeli)
+  // ---
+  // Simülasyon:
+  localStorage.setItem('currentUser', JSON.stringify({ username: valid.username }));
+  currentUser = { username: valid.username };
+  hide(registerModal);
+  show(loginModal);
+  alert('Kayıt başarılı! Şimdi giriş yapabilirsiniz.');
+};
+// Giriş
+function validateLogin() {
+  const username = document.getElementById('loginUsername').value.trim();
+  const password = document.getElementById('loginPassword').value;
+  if (!username || !password) {
+    alert('Lütfen tüm alanları doldurun!');
+    return false;
+  }
+  return { username, password };
+}
+document.getElementById('loginSubmit').onclick = async () => {
+  const valid = validateLogin();
+  if (!valid) return;
+  // Backend API çağrısı burada olacak (örnek, backend güncellenmeli)
+  // ---
+  // Simülasyon:
+  localStorage.setItem('currentUser', JSON.stringify({ username: valid.username }));
+  currentUser = { username: valid.username };
+  hide(loginModal);
+  updateUI();
+};
+// Çıkış
+const logoutBtn = document.getElementById('logoutBtn');
+logoutBtn.onclick = () => {
+  localStorage.removeItem('currentUser');
+  currentUser = null;
+  updateUI();
+};
+// Profil menüsü aç/kapa
+const profileAvatar = document.getElementById('profileAvatar');
+const profileDropdown = document.getElementById('profileDropdown');
+profileAvatar.onclick = () => {
+  profileDropdown.style.display = profileDropdown.style.display === 'flex' ? 'none' : 'flex';
+};
+document.body.addEventListener('click', function(e) {
+  if (!profileAvatar.contains(e.target) && !profileDropdown.contains(e.target)) {
+    profileDropdown.style.display = 'none';
+  }
+});
+// Profil resmi yükleme
+const profileImageInput = document.getElementById('profileImageInput');
+profileImageInput.onchange = (e) => {
+  const file = e.target.files[0];
+  if (!file) return;
+  const img = new Image();
+  const url = URL.createObjectURL(file);
+  img.onload = function() {
+    if (img.width > 720 || img.height > 720) {
+      alert('Profil resmi en fazla 720x720 piksel olmalı!');
+      URL.revokeObjectURL(url);
+      return;
+    }
+    localStorage.setItem('profileImage', url);
+    currentProfileImage = url;
+    profileAvatar.style.backgroundImage = `url('${url}')`;
+    profileDropdown.style.display = 'none';
+  };
+  img.src = url;
+};
+// İçerik koruması
+['contextmenu','copy','cut','selectstart'].forEach(ev=>document.addEventListener(ev,e=>e.preventDefault()));
+document.addEventListener('keydown',function(e){if(e.key==='F12'||(e.ctrlKey&&e.shiftKey&&(e.key==='I'||e.key==='J'||e.key==='C'))||(e.ctrlKey&&(e.key==='U'||e.key==='S'||e.key==='P'))){e.preventDefault();e.stopPropagation();return false;}});
+</script>
+<script>document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});</script>
+<script>document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});</script>
+<script src="yorumlar_bolum.js"></script>
+</body>
+</html>

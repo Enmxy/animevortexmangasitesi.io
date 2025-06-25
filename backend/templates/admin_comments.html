@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>Yorumları Yönet</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #181818; color: #fff; }
+        .container { max-width: 700px; margin: 2rem auto; background: #23243a; border-radius: 12px; padding: 2rem; box-shadow: 0 4px 32px #e5091440; }
+        h2 { color: #e50914; }
+        table { width: 100%; border-collapse: collapse; margin-top: 1.5rem; }
+        th, td { padding: 0.7rem; border-bottom: 1px solid #333; }
+        th { background: #1a1a1a; color: #e50914; }
+        tr:last-child td { border-bottom: none; }
+        form { display: inline; }
+        button { background: #e50914; color: #fff; border: none; padding: 0.4rem 1.1rem; border-radius: 24px; cursor: pointer; font-weight: bold; }
+        button:hover { background: #b0060f; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Yorumları Yönet</h2>
+        <a href="/admin">← Admin Anasayfa</a>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Kullanıcı</th>
+<th>Yıldız</th>
+<th>Yorum</th>
+<th>Tarih</th>
+<th>IP</th>
+<th>Sil</th>
+<th>IP Ban</th>
+            </tr>
+            {% for c in comments %}
+<tr>
+    <td>{{ c.id }}</td>
+    <td>{{ c.user }}</td>
+    <td>{{ c.rating }} ⭐</td>
+    <td>{{ c.content }}</td>
+    <td>{{ c.created_at.strftime('%Y-%m-%d %H:%M') }}</td>
+    <td>{{ c.ip }}</td>
+    <td>
+        <form method="post" action="/admin/comments/delete/{{c.id}}" style="display:inline;">
+            <button type="submit">Sil</button>
+        </form>
+    </td>
+    <td>
+        <form method="post" action="/admin/comments/ban_ip/{{c.ip}}" style="display:inline;">
+            <button type="submit">IP Ban</button>
+        </form>
+        <form method="post" action="/admin/comments/unban_ip/{{c.ip}}" style="display:inline;">
+            <button type="submit">Unban</button>
+        </form>
+    </td>
+</tr>
+{% endfor %}
+        </table>
+    </div>
+</body>
+</html>

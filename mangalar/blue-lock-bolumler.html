@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Lock Bölümler - Anime Vortex</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', Arial, sans-serif;
+            background: #18181c;
+            color: #fff;
+        }
+        .header {
+            width: 100%;
+            background: #1a1a1a;
+            box-shadow: 0 2px 16px #00000014;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .header nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.2rem 2vw;
+        }
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            font-weight: 900;
+            color: #e50914;
+            letter-spacing: -1px;
+        }
+        .nav-items a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 700;
+            margin: 0 1.1rem;
+            transition: color 0.2s;
+        }
+        .nav-items a:hover { color: #e50914; }
+        .auth-buttons {
+            display: flex;
+            gap: 0.7rem;
+        }
+        .modal-btn, .login-btn, .signup-btn {
+            background: #e50914;
+            color: #fff;
+            border: none;
+            padding: 0.7rem 1.7rem;
+            border-radius: 32px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .modal-btn:hover, .login-btn:hover, .signup-btn:hover {
+            background: #b0060f;
+        }
+        .hero {
+    min-height: 45vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: transparent !important;
+}
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    padding: 3.5rem 2rem 2.2rem 2rem;
+    background: rgba(24,24,24,0.68);
+    border-radius: 24px;
+    box-shadow: 0 8px 40px #0008;
+    backdrop-filter: blur(6px) saturate(120%);
+    -webkit-backdrop-filter: blur(6px) saturate(120%);
+}
+.manga-details {
+    background: rgba(24,24,24,0.77);
+    backdrop-filter: blur(2px) saturate(110%);
+    -webkit-backdrop-filter: blur(2px) saturate(110%);
+}
+.chapter-card {
+    background: rgba(34,34,44,0.72);
+    backdrop-filter: blur(2px) saturate(110%);
+    -webkit-backdrop-filter: blur(2px) saturate(110%);
+}
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            text-align: center;
+            padding: 3.5rem 2rem 2.2rem 2rem;
+        }
+        .hero-content h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 3rem;
+            margin-bottom: 0.6rem;
+            font-weight: 900;
+        }
+        .hero-content p {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #e50914;
+            margin-bottom: 1.2em;
+        }
+        .cta-button {
+            background: #e50914;
+            color: #fff;
+            border: none;
+            padding: 1rem 2.5rem;
+            border-radius: 32px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .cta-button:hover { background: #b0060f; }
+        .manga-details {
+            max-width: 900px;
+            margin: 2.5rem auto 0 auto;
+            padding: 2.5rem 2.5vw;
+            background: rgba(24,24,24,0.97);
+            border-radius: 18px;
+            box-shadow: 0 6px 36px #00000030;
+            position: relative;
+            z-index: 2;
+        }
+        .manga-header {
+            display: flex;
+            gap: 2.5rem;
+            align-items: center;
+            margin-bottom: 2.5rem;
+            flex-wrap: wrap;
+        }
+        .manga-header img {
+            width: 170px;
+            border-radius: 16px;
+            box-shadow: 0 2px 16px #00000020;
+        }
+        .manga-info h1 {
+            font-size: 2.2rem;
+            margin: 0 0 0.5rem 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+        .manga-badge {
+            background: #e50914;
+            color: #fff;
+            padding: 0.2em 0.8em;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            margin-left: 0.7em;
+        }
+        .manga-info p {
+            margin: 0.1em 0 0.6em 0;
+            font-size: 1rem;
+        }
+        .read-btn {
+            color: #fff;
+            border: none;
+            border-radius: 28px;
+            padding: 0.8rem 2rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            cursor: pointer;
+            margin-top: 0.7rem;
+            transition: background 0.2s;
+        }
+        .read-btn:hover { background: #e50914; color: #fff; }
+        .chapters h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2rem;
+            margin-top: 0;
+        }
+        .chapter-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
+            gap: 2.2rem;
+        }
+        .chapter-card {
+            background: rgba(34,34,44,0.97);
+            border-radius: 16px;
+            box-shadow: 0 2px 12px #00000018;
+            padding: 1.2rem 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1.2rem;
+        }
+        .chapter-number {
+            background: #e50914;
+            color: #fff;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            font-weight: 900;
+            border-radius: 12px;
+            box-shadow: 0 2px 8px #e5091440;
+        }
+        .chapter-info h3 {
+            margin: 0;
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+        .chapter-info p {
+            margin: 0.2rem 0 0.6rem 0;
+            font-size: 0.97rem;
+        }
+        @media (max-width: 700px) {
+            .manga-header { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+            .manga-header img { width: 100%; max-width: 220px; }
+        }
+    </style>
+    <script>
+      document.addEventListener('contextmenu', function(e) { e.preventDefault(); });
+      document.addEventListener('copy', function(e) { e.preventDefault(); });
+      document.addEventListener('cut', function(e) { e.preventDefault(); });
+      document.addEventListener('selectstart', function(e) { e.preventDefault(); });
+      document.addEventListener('keydown', function(e) {
+        if ((e.ctrlKey && (e.key === 'u' || e.key === 'U' || e.key === 's' || e.key === 'S')) ||
+            (e.ctrlKey && e.shiftKey && (e.key === 'i' || e.key === 'I' || e.key === 'j' || e.key === 'J')) ||
+            (e.key === 'F12')) {
+          e.preventDefault();
+        }
+      });
+    </script>
+</head>
+<body>
+<script>
+  window.mangaId = 5;
+  window.chapterId = null;
+</script>
+    <div class="header">
+        <nav>
+            <div class="logo">Anime Vortex</div>
+            <div class="nav-items">
+                <a href="../index.html">Ana Sayfa</a>
+                <a href="#mangalar">Mangalar</a>
+                <a href="#yeni-cikanlar">Yeni Çıkanlar</a>
+            </div>
+        </nav>
+    </div>
+
+    <section class="hero animated-bg" style="min-height:45vh; position:relative; overflow:hidden;">
+
+.animated-bg {
+  background: url('../images/blue-lock.jpg') center/cover no-repeat;
+}
+.animated-gradient {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  background: linear-gradient(270deg, #1a1a1a, #e50914, #0d47a1, #1a1a1a, #e50914, #0d47a1);
+  background-size: 1200% 1200%;
+  opacity: 0.65;
+  animation: gradientMove 18s ease-in-out infinite;
+  border-radius: 0 0 36px 36px;
+}
+@keyframes gradientMove {
+  0% {background-position:0% 50%}
+  50% {background-position:100% 50%}
+  100% {background-position:0% 50%}
+}
+</style>
+    <video class="hero-bg-video" autoplay muted loop playsinline>
+        <source src="../background.mp4" type="video/mp4">
+        Tarayıcınız video etiketini desteklemiyor.
+    </video>
+
+    </section>
+    <main class="manga-details">
+        <div class="manga-header">
+            <img src="../images/blue-lock.jpg" alt="Blue Lock">
+            <div class="manga-info">
+                <h1>Blue Lock <span class="manga-badge">Spor</span></h1>
+                <p>Yazar: <b>Muneyuki Kaneshiro</b></p>
+                <p>Tür: <span style="color:#e50914">Spor, Shounen</span></p>
+                <p>Toplam Bölüm: <b>250+</b></p>
+                <div style="margin-top:1.2rem">
+                    <button class="read-btn"><i class="fa-solid fa-book-open"></i> Rastgele Bölüm Oku</button>
+                </div>
+            </div>
+        </div>
+        <section class="chapters">
+            <h2>Bölümler</h2>
+            <div class="chapter-list">
+                <div class="chapter-card">
+                    <div class="chapter-number">1</div>
+                    <div class="chapter-info">
+                        <h3>Bölüm 1: Egoist</h3>
+                        <p>Yayın Tarihi: 2018</p>
+                    </div>
+                    <a href="../blue-lock/blue-lock1.html" class="read-btn" style="display:inline-block;text-decoration:none;"><i class="fa-solid fa-eye"></i> Oku</a>
+                </div>
+                <div class="chapter-card">
+                    <div class="chapter-number">2</div>
+                    <div class="chapter-info">
+                        <h3>Bölüm 2: Seçim</h3>
+                        <p>Yayın Tarihi: 2018</p>
+                    </div>
+                    <button class="read-btn"><i class="fa-solid fa-eye"></i> Oku</button>
+                </div>
+                <!-- Daha fazla bölüm buraya eklenebilir -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footer-content" style="text-align:center; padding:2rem 0 1rem 0; color:#aaa; font-size:1rem;">
+            <p>&copy; 2025 Anime Vortex. Tüm hakları saklıdır. | Tasarım: <span style="color:#e50914;font-weight:bold">Netflix Inspired</span></p>
+        </div>
+    </footer>
+</body>
+</html>
+            </div>
+        </section>
+    </main>
+    <footer>
+    <div class="footer-content">
+        <p>&copy; 2025 Anime Vortex. Tüm hakları saklıdır. | Tasarım: <span style="color:#e50914;font-weight:bold">Netflix Inspired</span></p>
+    </div>
+</footer>
+    <script src="../script.js"></script>
+<script>document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});</script>
+</body>
+</html>
